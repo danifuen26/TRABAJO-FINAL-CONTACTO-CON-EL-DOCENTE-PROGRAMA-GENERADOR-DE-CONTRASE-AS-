@@ -36,4 +36,4 @@ REFLEXION SOBRE EL IMPACTO DE LA TECNOLOGIA EN LA SOCIEDAD:
 
 El generador seguro de contraseñas contribuye a fortalecer la seguridad digital de los usuarios al facilitar la creación de contraseñas más seguras y difíciles de vulnerar. Aunque es una herramienta sencilla, promueve buenas prácticas en la protección de la información personal y fomenta una mayor conciencia sobre la importancia de la ciberseguridad en la vida cotidiana.
 
-https://github.com/danifuen26/TRABAJO-FINAL-CONTACTO-CON-EL-DOCENTE-PROGRAMA-GENERADOR-DE-CONTRASE-AS-    
+https://drive.google.com/file/d/1rEyLhZ17HE5_OCuaShHhBLcf8B4Zmw-F/view?usp=sharing       
