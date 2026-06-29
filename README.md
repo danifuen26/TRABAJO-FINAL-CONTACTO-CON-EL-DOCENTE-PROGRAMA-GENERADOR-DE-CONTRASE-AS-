@@ -1,10 +1,16 @@
 # TRABAJO-FINAL-CONTACTO-CON-EL-DOCENTE-PROGRAMA-GENERADOR-DE-CONTRASE-AS-
+
 Programa generador de contraseñas seguras
+
 ESTUDIANTE : FUENTES PAREDES DANIELA CCAROLINA
+
 OBJETIVO DEL SISTEMA :
+
 Desarrollar un generador seguro de contraseñas que permita a los usuarios crear contraseñas fuertes y confiables de manera rápida y sencilla, proporcionando una alternativa que contribuya a mejorar la seguridad de sus cuentas y la protección de su información personal.
 DESCRIPCION DE FUNCIONALIDADES: 
+
 ## Descripción de funcionalidades
+
  Al iniciar el programa, se muestra una breve presentación del sistema y del desarrollador, proporcionando al usuario una bienvenida e introducción al funcionamiento de la aplicación.
 
 Importación de librerías: Se utilizan las librerías `random` y `string` para generar contraseñas aleatorias utilizando letras mayúsculas, minúsculas, números y símbolos especiales. Además, se define el archivo donde se almacenarán las contraseñas generadas.
