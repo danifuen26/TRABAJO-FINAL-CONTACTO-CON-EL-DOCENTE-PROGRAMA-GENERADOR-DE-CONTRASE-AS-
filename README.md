@@ -9,9 +9,9 @@ OBJETIVO DEL SISTEMA :
 Desarrollar un generador seguro de contraseñas que permita a los usuarios crear contraseñas fuertes y confiables de manera rápida y sencilla, proporcionando una alternativa que contribuya a mejorar la seguridad de sus cuentas y la protección de su información personal.
 DESCRIPCION DE FUNCIONALIDADES: 
 
-## Descripción de funcionalidades
+Descripción de funcionalidades
 
- Al iniciar el programa, se muestra una breve presentación del sistema y del desarrollador, proporcionando al usuario una bienvenida e introducción al funcionamiento de la aplicación.
+Al iniciar el programa, se muestra una breve presentación del sistema y del desarrollador, proporcionando al usuario una bienvenida e introducción al funcionamiento de la aplicación.
 
 Importación de librerías: Se utilizan las librerías `random` y `string` para generar contraseñas aleatorias utilizando letras mayúsculas, minúsculas, números y símbolos especiales. Además, se define el archivo donde se almacenarán las contraseñas generadas.
 
@@ -29,6 +29,9 @@ Opción de consulta y salida: La segunda opción permite visualizar todas las co
 
 En conjunto, el sistema integra funciones de generación, almacenamiento y consulta 
 de contraseñas, incorporando validación de entradas, manejo básico de errores y persistencia de datos mediante archivos, lo que lo convierte en una solución práctica, sencilla y funcional para la gestión de contraseñas seguras.
+
 FECHA: 28/06/2026
+
 REFLEXION SOBRE EL IMPACTO DE LA TECNOLOGIA EN LA SOCIEDAD: 
+
 El generador seguro de contraseñas contribuye a fortalecer la seguridad digital de los usuarios al facilitar la creación de contraseñas más seguras y difíciles de vulnerar. Aunque es una herramienta sencilla, promueve buenas prácticas en la protección de la información personal y fomenta una mayor conciencia sobre la importancia de la ciberseguridad en la vida cotidiana.
