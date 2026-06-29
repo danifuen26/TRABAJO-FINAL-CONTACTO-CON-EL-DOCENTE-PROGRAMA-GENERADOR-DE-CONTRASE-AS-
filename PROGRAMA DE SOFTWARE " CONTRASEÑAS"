@@ -1,1 +1,77 @@
 
+# Programa que genera contraseñas seguras y las guarda en un archivo de texto
+import random
+import string
+
+# Nombre del archivo donde se van a guardar las contraseñas
+archivo = "mis_contrasenas.txt"
+# Se define la funcion que va a generar la contraseña
+# Recibe el largo que el usuario quiere y devuelve una contraseña aleatoria
+def generar_contrasena(largo):
+    
+    todos = string.ascii_letters + string.digits + string.punctuation # string.ascii_letters tiene todas las letras mayusculas y minusculas,string.digits tiene los numeros del 0 al 9 y string.punctuation tiene simbolos
+    contrasena = ""
+    # Se va armando la contraseña letra por letra hasta llegar al largo pedido por el usuario
+    for i in range(largo):
+        contrasena = contrasena + random.choice(todos)
+    return contrasena
+
+# Se define la funcion que va a guardar la contraseña en el archivo
+def guardar_contrasena(sitio, contrasena):
+    # Se abre el archivo en modo 'a' para no borrar lo que ya estaba guardado
+    with open(archivo, "a", encoding="utf-8") as f:
+        f.write(sitio + ": " + contrasena + "\n")
+    print("Contraseña guardada con exito!")
+
+# Se define la funcion que va a mostrar todas las contraseñas guardadas
+def ver_contrasenas():
+    print("\n--- Contraseñas guardadas ---")
+    try:
+        with open(archivo, "r", encoding="utf-8") as f:
+            lineas = f.readlines()
+
+        # Si el archivo esta vacio no hay nada que mostrar
+        if len(lineas) == 0:
+            print("Todavia no hay contraseñas guardadas.")
+        else:
+            # Se recorre la lista e imprime cada linea
+            for i in range(len(lineas)):
+                print(lineas[i].strip())
+
+    except FileNotFoundError:
+        # Esto se muestra si el usuario nunca ha guardado ninguna contraseña
+        print("No se encontro el archivo, guarda una contraseña primero.")
+    print("----------------------------")
+
+# Bloque principal que ejecuta el programa
+# Aqui empieza a correr todo, el menu se repite hasta que el usuario elija salir
+while True:
+    print("\n=== GENERADOR DE CONTRASEÑAS SEGURAS ===")
+    print("1. Generar una nueva contraseña")
+    print("2. Ver contraseñas guardadas")
+    print("3. Salir")
+    opcion = input("Elige una opcion (1-3): ")
+
+    # Opcion 1: generar y (opcionalmente) guardar una contraseña
+    if opcion == "1":
+        largo = int(input("De cuantos caracteres quieres la contraseña?: "))
+        if largo < 8:
+            print("Advertencia: se recomienda minimo 8 caracteres para que sea segura.")
+        # Se llama a la funcion y se guarda el resultado en una variable
+        nueva_contrasena = generar_contrasena(largo)
+        print("La contraseña sugerida es: " + nueva_contrasena)
+        # Se le pregunta al usuario si quiere guardarla
+        respuesta = input("Deseas guardarla? (si/no): ").lower()
+        if respuesta == "si":
+            sitio = input("Para que sitio o app es? (ej: Gmail, Netflix): ")
+            guardar_contrasena(sitio, nueva_contrasena)
+    # Opcion 2: ver lo que hay guardado en el archivo
+    elif opcion == "2":
+        ver_contrasenas()
+    # Opcion 3: salir del programa
+    elif opcion == "3":
+        print("Hasta luego!")
+        break
+    # Si el usuario escribe algo que no es 1, 2 o 3 se muestra un mensaje de error
+    else:
+        print("Opcion no valida, intenta de nuevo.")
